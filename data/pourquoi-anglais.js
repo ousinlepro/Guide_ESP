@@ -222,6 +222,25 @@ A116:["« Since » introduit un point de départ daté (since 2019), pas une dur
       "« From » exige un point d'arrivée (from… to…)."],
 A117:["Avec « neither… nor », l'accord se fait avec le sujet le plus PROCHE, ici « students », au pluriel.",
       "Même erreur d'accord, au présent cette fois.",
-      "Le singulier ne convient pas, et le present perfect n'est pas appelé ici."]
+      "Le singulier ne convient pas, et le present perfect n'est pas appelé ici."],
+
+/* ---------- Ajout : niveau test d'entrée ---------- */
+A200:["« Since » est suivi d'un point de départ (since 2021) et s'emploie avec le present perfect.","« Before » signifie « avant » : « three years before » renvoie à un autre moment passé, pas à maintenant.","« For » se place AVANT la durée (for three years) et indique combien de temps."],
+A201:["Le récit est au passé (arrived) : il faut had, pas has.","« Already » indique une action terminée avant mon arrivée, pas en cours.","Après had, il faut le participe passé (left), pas la base verbale."],
+A202:["Avec « would » dans la principale, la subordonnée en « if » se met au prétérit.","On ne met jamais « will » dans la subordonnée en « if ».","« Would » se place dans la principale, pas après « if »."],
+A203:["« Would » s'emploie pour une hypothèse irréelle (if it rained…). Ici, if + présent appelle will.","Le prétérit ne convient pas : l'action est future.","« Would have stayed » exprime un regret dans le passé (3ᵉ type)."],
+A204:["« Although » doit être suivi d'une proposition complète (although it was raining).","« However » relie deux phrases et se place souvent en tête suivi d'une virgule.","« Because » exprime la cause : ils n'ont pas joué À CAUSE de la pluie, le sens est contraire."],
+A205:["« Because » exprime une cause, pas une opposition.","« So that » exprime un but (afin que).","« Unless » signifie « à moins que » : une condition, pas une opposition."],
+A206:["« Mustn't » exprime une interdiction : le contraire du conseil donné.","« Needn't » = ce n'est pas nécessaire, ce qui contredit « sounds bad ».","« Can't » exprime une impossibilité, pas un conseil."],
+A207:["« Must I…? » demande si c'est une obligation, pas une permission.","« Should I…? » demande un conseil.","« Need I…? » demande si c'est nécessaire."],
+A208:["« Mind » n'est jamais suivi de « to » + base verbale.","Après « mind », il faut la forme en -ing, pas la base verbale.","Le participe passé ne convient pas après « mind »."],
+A209:["« Decide » ne se construit pas avec le gérondif.","Il manque « to » : decide to + base verbale.","Le prétérit ne peut pas suivre directement « decided »."],
+A210:["Le présent simple ne s'emploie pas pour une promesse future.","« Would » est conditionnel : il exprime une hypothèse, pas une promesse.","« Am calling to » est agrammatical."],
+A211:["À l'actif, « English speaks » voudrait dire que la langue parle elle-même.","Le présent continu actif a le même défaut : il faut un passif.","« Spoke » est le prétérit ; le participe passé est « spoken »."],
+A212:["À l'actif, « my bike has stolen » voudrait dire que le vélo a volé quelque chose.","Le vélo ne vole pas : il faut un passif.","Le participe passé de « steal » est « stolen », et il faut l'auxiliaire be."],
+A213:["« Who » s'emploie pour une personne.","« Whose » exprime la possession (dont le…).","« Whom » est un pronom complément pour une personne."],
+A214:["C'est le piège : « éventuellement » se traduit par possibly ou perhaps.","« Évidemment » se dit obviously ou of course.","« Immédiatement » se dit immediately."],
+A215:["« Make » s'emploie pour créer ou fabriquer (make a cake), pas pour les devoirs.","« Take » ne se combine pas avec homework.","« Every evening » exprime une habitude : présent simple, pas present perfect."],
+A216:["Après « be used to », il faut -ing. (Used to + base verbale, sans be, = habitude passée.)","Le prétérit ne peut pas suivre « to ».","« Be getting up » est agrammatical ici."]
 
 });

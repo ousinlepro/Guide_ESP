@@ -255,6 +255,28 @@ F162:["Une condition s'exprimerait avec « si » : ici la source (« selon la pr
       "L'ordre atténué serait « pourriez-vous… », formulé à la deuxième personne."],
 F163:["La cause s'exprime par « car », « parce que », « puisque ».",
       "La conséquence s'exprime par « donc », « ainsi », « c'est pourquoi ».",
-      "L'addition s'exprime par « de plus », « en outre », « par ailleurs »."]
+      "L'addition s'exprime par « de plus », « en outre », « par ailleurs »."],
+
+/* ---------- Ajout : niveau test d'entrée ---------- */
+F200:["Le COD « que » (= les lettres) est placé AVANT avoir : le participe s'accorde, écrites.","Avec être, le participe s'accorde avec le sujet « les lettres » : parties, au féminin.","« Écris » est une forme conjuguée (j'écris), pas le participe passé « écrit(es) »."],
+F201:["Le COD est « les mains », placé après : le participe reste invariable.","Il n'y a aucune raison d'accorder au masculin pluriel.","Après l'auxiliaire être, on met le participe passé, pas l'infinitif."],
+F202:["Avec être, le participe s'accorde avec le sujet : « ils » impose le pluriel.","« Ils » est masculin : pas de -e.","« Ils » est masculin pluriel : arrivés."],
+F203:["C'est le premier nom (chef) qui se met au pluriel, pas le complément « d'œuvre ».","« D'œuvre » est un complément du nom : il reste invariable.","Il faut marquer le pluriel sur « chefs »."],
+F204:["« Marron » est un nom (le fruit) employé comme couleur : il ne s'accorde pas.","Les adjectifs de couleur issus d'un nom (marron, orange, cerise) sont invariables.","Ni accord en genre, ni accord en nombre pour un nom de couleur."],
+F205:["« Tout » ne varie que devant un adjectif féminin commençant par une consonne ou un h aspiré (toute contente). « Heureuse » a un h muet.","« Tous » est masculin pluriel : le sujet est « elle », singulier.","Le sujet est au singulier, et « tout » adverbe est ici invariable."],
+F206:["-ais est la terminaison des 1ʳᵉ et 2ᵉ personnes (j'aurais, tu aurais). Avec « il » : aurait.","« Aurai » est le futur à la 1ʳᵉ personne (j'aurai).","« Auré » n'existe pas."],
+F207:["« S'est » est l'auxiliaire d'un verbe pronominal (il s'est levé) : il faut un participe après.","« Ces » est un déterminant démonstratif suivi d'un nom.","« Ses » est un déterminant possessif (ses livres)."],
+F208:["« Quant » s'emploie toujours avec « à » : quant à moi.","« Qu'en » = que + en (qu'en penses-tu ?).","« Camp » est un nom (un camp militaire)."],
+F209:["« Soit » est la 3ᵉ personne (qu'il soit). Avec « tu » : sois.","« Es » est l'indicatif présent. « Il faut que » exige le subjonctif.","Le futur est impossible après « il faut que »."],
+F210:["Venir a un radical irrégulier au passé simple : vin-.","Il n'y a pas de i après le n : ils vinrent.","-èrent est la terminaison des verbes du 1ᵉʳ groupe (ils chantèrent)."],
+F211:["« Entrer » n'a pas de COD, et le groupe se rapporte au sujet.","Un attribut suit un verbe d'état (être, sembler…). Ici, il n'y a pas de verbe d'état.","Il n'exprime ni temps, ni lieu, ni cause : il qualifie le directeur."],
+F212:["Un verbe d'état n'a pas de COD.","Une épithète est directement liée au nom (un homme fatigué), sans verbe.","Un complément du nom est introduit par une préposition (le livre de Paul)."],
+F213:["C'est presque le contraire : procrastiner, c'est repousser le travail.","Critiquer sévèrement se dit fustiger ou vilipender.","Prévoir l'avenir se dit pronostiquer ou prédire."],
+F214:["« Bavard » est un synonyme de prolixe.","« Diffus » (qui délaie sa pensée) est proche de prolixe.","« Verbeux » est un synonyme de prolixe."],
+F215:["Les rimes croisées suivent le schéma ABAB.","Les rimes embrassées suivent le schéma ABBA.","« Alternées » est un autre nom des rimes croisées (ABAB)."],
+F216:["La litote dit moins pour suggérer plus (« Va, je ne te hais point »). Ici, on exagère.","L'euphémisme atténue une réalité pénible. Ici, on l'amplifie.","La métonymie remplace un mot par un autre lié (boire un verre). Rien de tel ici."],
+F217:["Le registre tragique montre un personnage écrasé par la fatalité.","Le registre lyrique exprime les sentiments personnels.","Le registre épique célèbre des exploits héroïques."],
+F218:["La concordance des temps (conditionnel, « le lendemain ») ne s'applique que si le verbe introducteur est au passé (« il dit » est au présent).","Au discours indirect, « je » devient « il » : c'est lui qui viendra.","Avec un verbe introducteur au présent, « demain » reste « demain »."],
+F219:["Cheikh Hamidou Kane a écrit « L'Aventure ambiguë ».","Birago Diop est l'auteur des « Contes d'Amadou Koumba ».","Abdoulaye Sadji a écrit « Maïmouna » et « Nini, mulâtresse du Sénégal »."]
 
 });

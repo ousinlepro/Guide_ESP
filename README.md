@@ -14,8 +14,8 @@ Version en ligne (consultable depuis le téléphone) :
 https://claude.ai/artifact/Fju4ELZe6XGChZDiywrJTp
 
 ## Contenu
-- **334 questions QCM** corrigées et expliquées, réparties en 53 chapitres
-  (maths 106 · physique 83 · français 78 · anglais 67)
+- **448 questions QCM** corrigées et expliquées (329 au niveau test d'entrée), réparties en 53 chapitres
+  (maths 144 · physique 122 · français 98 · anglais 84)
 - Deux niveaux : `d:1` niveau test d'entrée (Terminale S2), `d:2` renforcé
 - **Épreuves blanches** chronométrées (80 q / 3 h, 40 q / 1 h 30, 20 q / 45 min)
   avec note pondérée Maths ×3, Physique ×3, Français ×2, Anglais ×1
@@ -66,6 +66,19 @@ Chaque modèle a son PDF et un aperçu PNG de ses pages 1 et 2. Pour régénére
 
     node outils/extrait.js > outils/contenu.json
     python outils/modeles.py
+
+### Série corrigée (maths et physique)
+
+`Cap-ESP-serie-corrigee.pdf` : 25 exercices (11 de maths, 14 de physique), deux séries
+éclair façon QCM, corrigés complets avec un « réflexe test » par exercice et un plan de
+huit jours. Les sources sont dans `outils/serie/` : `contenu.js` (énoncés et corrigés en
+LaTeX), `schemas.js` (schémas SVG, courbes calculées), `verifie.py` (recalcul de chaque
+résultat avec sympy). Pour régénérer :
+
+    cd outils/serie
+    npm install            # KaTeX et les polices Source Serif 4 / Source Sans 3
+    python verifie.py      # doit afficher « toutes justes »
+    node build.js
 
 ## Structure
     index.html        application (UI + moteur de quiz)

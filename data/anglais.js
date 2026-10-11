@@ -93,6 +93,25 @@ window.BANQUE.anglais = [
 {id:"A114",ch:"Structures",d:2,q:"It's high time we ……………… revising.",o:["started","start","will start","have started"],r:0,e:"« It's (high) time » est suivi du prétérit modal pour exprimer qu'il est urgent d'agir."},
 {id:"A115",ch:"Structures",d:2,q:"He speaks English ……………… .",o:["fluently","fluent","with fluent","fluentness"],r:0,e:"Le verbe demande un adverbe de manière : adjectif + -ly."},
 {id:"A116",ch:"Structures",d:1,q:"She has lived here ……………… five years.",o:["for","since","during","from"],r:0,e:"« For » + durée ; « since » + point de départ ; « during » + nom d'événement."},
-{id:"A117",ch:"Structures",d:2,q:"Neither the teacher nor the students ……………… present.",o:["were","was","is","has been"],r:0,e:"Avec « neither … nor », le verbe s'accorde avec le sujet le plus proche (« the students »)."}
+{id:"A117",ch:"Structures",d:2,q:"Neither the teacher nor the students ……………… present.",o:["were","was","is","has been"],r:0,e:"Avec « neither … nor », le verbe s'accorde avec le sujet le plus proche (« the students »)."},
+
+/* ---------- Ajout : niveau test d'entrée ---------- */
+{id:"A200",ch:"Present perfect",d:1,q:"I met him three years ……… .",o:["ago","since","before","for"],r:0,e:"« Ago » se place APRÈS une durée et s'emploie avec le prétérit : three years ago = il y a trois ans."},
+{id:"A201",ch:"Past perfect",d:1,q:"When I arrived at the station, the train ……… already ……… .",o:["had / left","has / left","was / leaving","had / leave"],r:0,e:"Action antérieure à une autre action passée : past perfect (had + participe passé)."},
+{id:"A202",ch:"Conditionals",d:1,q:"If I ……… rich, I would travel around the world.",o:["were","am","will be","would be"],r:0,e:"Hypothèse irréelle au présent : if + prétérit (were pour toutes les personnes), would + base verbale."},
+{id:"A203",ch:"Conditionals",d:1,q:"If it rains tomorrow, we ……… at home.",o:["will stay","would stay","stayed","would have stayed"],r:0,e:"Condition réaliste au futur : if + présent, will + base verbale."},
+{id:"A204",ch:"Connectors",d:1,q:"……… the rain, they played the match.",o:["Despite","Although","However","Because"],r:0,e:"« Despite » + nom (the rain) exprime l'opposition."},
+{id:"A205",ch:"Connectors",d:1,q:"She was very tired; ………, she kept on working.",o:["nevertheless","because","so that","unless"],r:0,e:"« Nevertheless » (= néanmoins) introduit une opposition entre deux phrases."},
+{id:"A206",ch:"Modals",d:1,q:"That cough sounds bad. You ……… see a doctor.",o:["should","mustn't","needn't","can't"],r:0,e:"« Should » exprime un conseil."},
+{id:"A207",ch:"Modals",d:1,q:"……… I borrow your pen, please?",o:["May","Must","Should","Need"],r:0,e:"« May I…? » est la façon polie de demander une permission."},
+{id:"A208",ch:"Gerund & infinitive",d:1,q:"Would you mind ……… the window?",o:["opening","to open","open","opened"],r:0,e:"« Mind » est suivi du gérondif (verbe + -ing)."},
+{id:"A209",ch:"Gerund & infinitive",d:1,q:"She decided ……… medicine.",o:["to study","studying","study","studied"],r:0,e:"« Decide » est suivi de l'infinitif avec « to »."},
+{id:"A210",ch:"Present & future",d:1,q:"Don't worry, I ……… you tomorrow, I promise!",o:["will call","call","would call","am calling to"],r:0,e:"Promesse ou décision prise au moment où l'on parle : will + base verbale."},
+{id:"A211",ch:"Passif & discours rapporté",d:1,q:"English ……… all over the world.",o:["is spoken","speaks","is speaking","has spoke"],r:0,e:"La langue ne parle pas : elle est parlée. Passif au présent : is + participe passé."},
+{id:"A212",ch:"Passif & discours rapporté",d:1,q:"Somebody has taken my bike! My bike ……… !",o:["has been stolen","has stolen","is stealing","was steal"],r:0,e:"Passif au present perfect : has been + participe passé (stolen). Le vélo subit l'action."},
+{id:"A213",ch:"Relatifs & déterminants",d:1,q:"The book ……… I bought yesterday is very interesting.",o:["which","who","whose","whom"],r:0,e:"Antécédent non humain (the book) : which (ou that)."},
+{id:"A214",ch:"Vocabulaire & faux amis",d:1,q:"« Eventually » signifie :",o:["finalement","éventuellement","évidemment","immédiatement"],r:0,e:"Faux ami : eventually = finalement, au bout du compte. « Éventuellement » se dit possibly."},
+{id:"A215",ch:"Collocations",d:1,q:"Every evening, the students ……… their homework.",o:["do","make","take","have done"],r:0,e:"On dit « to do homework » (do pour les tâches, make pour fabriquer)."},
+{id:"A216",ch:"Structures",d:1,q:"He is used to ……… early.",o:["getting up","get up","got up","be getting up"],r:0,e:"« Be used to » (= être habitué à) : « to » est une préposition, suivie de -ing."}
 
 ];
