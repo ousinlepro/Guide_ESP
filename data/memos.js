@@ -147,87 +147,29 @@ window.MEMOS = {
     "Confondre S = −b/a et S = b/a dans les relations coefficients-racines."],
  s:"trigo"},
 
-/* ===================== PHYSIQUE ===================== */
-"P1 · Cinématique":{
- f:["MRU : a = 0, v constante, x = vt + x₀",
-    "MRUV : v = at + v₀ ; x = ½at² + v₀t + x₀ ; v² − v₀² = 2a(x − x₀)",
-    "Circulaire uniforme : a = v²/R dirigée vers le centre ; ω = 2πN = 2π/T ; v = Rω",
-    "Sinusoïdal x = A·cos(ωt + φ) ⇒ a = −ω²x"],
- m:"Dériver la loi horaire donne la vitesse, dériver encore donne l'accélération. Inversement, on remonte par intégration en fixant les constantes avec les conditions initiales. La relation v² − v₀² = 2a(x − x₀) évite de passer par le temps.",
- p:["Croire que l'accélération est nulle dans un mouvement circulaire uniforme : la vitesse change de direction, donc a = v²/R ≠ 0.",
-    "Confondre vitesse angulaire ω (rad/s) et fréquence N (tours/s) : ω = 2πN.",
-    "Oublier v₀ ou x₀ dans la loi horaire."]},
-
-"P2 · Dynamique":{
- f:["RFD / théorème du centre d'inertie : ΣF⃗ = m·a⃗<sub>G</sub> (référentiel galiléen)",
-    "Théorème de l'énergie cinétique : ΔE<sub>c</sub> = ΣW(F⃗)",
-    "Travail du poids : W = mg(z<sub>A</sub> − z<sub>B</sub>), positif en descente",
-    "W = F⃗·AB⃗ = F·AB·cos α : nul si la force est perpendiculaire au déplacement"],
- m:"Toujours dans cet ordre : définir le système, choisir le référentiel (galiléen), faire le bilan des forces extérieures, projeter la RFD sur des axes bien choisis. Si la question ne porte que sur des vitesses et des positions, le théorème de l'énergie cinétique est souvent plus rapide.",
- p:["Oublier une force dans le bilan, la réaction du support en particulier.",
-    "Projeter sur un axe mal orienté et se tromper de signe.",
-    "Croire qu'une force constante en norme travaille toujours : la force de Lorentz ne travaille jamais."]},
-
-"P3 · Applications":{
- f:["Chute libre : a = g, t = √(2h/g), v = √(2gh) (indépendantes de la masse)",
-    "Plan incliné sans frottement : a = g·sin α",
-    "Projectile : trajectoire parabolique, portée = v₀²·sin(2α)/g, maximale pour α = 45°",
-    "Particule accélérée sous une d.d.p. U : E<sub>c</sub> = |q|·U"],
- m:"Projeter la RFD sur deux axes : le mouvement horizontal est uniforme, le vertical uniformément varié. Éliminer le temps entre les deux équations horaires pour obtenir l'équation de la trajectoire. Sans frottement, la conservation de l'énergie mécanique donne la vitesse en une ligne.",
- p:["Faire dépendre la durée de chute de la masse : elle s'élimine dans ma⃗ = mg⃗.",
-    "Utiliser g·cos α au lieu de g·sin α sur un plan incliné.",
-    "Oublier que deux particules de charges égales accélérées sous la même U ont la même énergie cinétique, mais pas la même vitesse si leurs masses diffèrent."],
- s:"plan"},
-
-"P4 · Gravitation":{
- f:["F = G·m·m′/r² avec G = 6,67×10⁻¹¹ SI",
-    "g₀ = GM/R² à la surface ; g = GM/(R + h)² à l'altitude h",
-    "Satellite circulaire : v = √(GM/r), indépendante de sa masse",
-    "3ᵉ loi de Kepler : T²/r³ = 4π²/(GM)"],
- m:"Écrire que l'attraction gravitationnelle fournit exactement l'accélération centripète : GMm/r² = mv²/r. La masse du satellite se simplifie, d'où v = √(GM/r), puis T = 2πr/v conduit à la troisième loi de Kepler.",
- p:["Oublier le carré au dénominateur : la force varie en 1/r², pas en 1/r.",
-    "Faire dépendre la vitesse du satellite de sa propre masse : elle disparaît du calcul.",
-    "Confondre le rayon de l'orbite r = R + h et l'altitude h seule."],
- s:"satellite"},
-
-"P5 · Champ magnétique":{
- f:["Solénoïde : B = μ₀·n·I, avec n le nombre de spires par mètre (n = N/L)",
-    "Fil rectiligne infini : B = μ₀·I/(2πr)",
-    "μ₀ = 4π×10⁻⁷ SI ; B en teslas (T)"],
- m:"Convertir N en n = N/L avant tout calcul sur un solénoïde. Pour l'orientation, régle du tire-bouchon ou du bonhomme d'Ampère. À l'intérieur d'un solénoïde long, le champ est uniforme et parallèle à l'axe.",
- p:["Utiliser N au lieu de n = N/L dans B = μ₀nI.",
-    "Confondre le tesla (champ B) et le weber (flux Φ).",
-    "Oublier le 2π au dénominateur pour le fil rectiligne."]},
-
-"P6 · Particule dans un champ B":{
- f:["Force de Lorentz : F⃗ = q·v⃗ ∧ B⃗, toujours perpendiculaire à v⃗",
-    "Travail nul ⇒ ‖v⃗‖ reste constante : le mouvement est uniforme",
-    "Rayon : R = mv/(|q|·B) ; période T = 2πm/(|q|·B), indépendante de v"],
- m:"La force étant perpendiculaire à la vitesse, elle ne travaille pas : l'énergie cinétique se conserve. Si v⃗ ⊥ B⃗, la trajectoire est un cercle ; on obtient R en écrivant |q|vB = mv²/R. Si v⃗ est colinéaire à B⃗, la force est nulle et le mouvement rectiligne uniforme.",
- p:["Croire que la force magnétique accélère la particule en norme : elle ne change que la direction.",
-    "Inverser R = mv/(qB) en qB/(mv) : vérifie par l'homogénéité.",
-    "Oublier que la période ne dépend pas de la vitesse — c'est le principe du cyclotron."],
- s:"lorentz"},
-
-"P7 · Loi de Laplace":{
- f:["F = B·I·L·sin α, avec α l'angle entre le conducteur et B⃗",
-    "F⃗ perpendiculaire au plan formé par le conducteur et B⃗",
-    "Force maximale quand le conducteur est perpendiculaire au champ (α = 90°)"],
- m:"Repérer l'angle α entre le conducteur et le champ, puis appliquer F = BIL·sin α. La direction s'obtient par la règle des trois doigts de la main droite : index le champ, majeur le courant, pouce la force.",
- p:["Écrire cos α au lieu de sin α : la force est maximale à 90°, pas à 0°.",
-    "Confondre loi de Laplace (force sur un conducteur) et force de Lorentz (force sur une charge isolée).",
-    "Placer la force dans le plan du conducteur et du champ : elle lui est perpendiculaire."]},
-
-"P8 · Induction & dipôle RL":{
- f:["e = −dΦ/dt ; loi de Lenz : l'effet s'oppose à la cause qui lui donne naissance",
-    "Bobine : u = r·i + L·di/dt ; flux propre Φ = L·i",
-    "Constante de temps : τ = L/R ; énergie magnétique E = ½·L·i²",
-    "L'intensité dans une bobine ne peut pas subir de discontinuité."],
- m:"C'est la VARIATION du flux qui crée la f.é.m. induite, pas le champ lui-même. Un champ constant à travers un circuit immobile n'induit rien. Le signe « − » de la loi de Lenz traduit la conservation de l'énergie. Le régime permanent est atteint après environ 5τ.",
- p:["Croire qu'un champ magnétique uniforme et constant produit une induction : il faut que le flux varie.",
-    "Écrire τ = RL ou τ = R/L au lieu de τ = L/R : contrôle par l'homogénéité (des secondes).",
-    "Confondre l'énergie de la bobine ½Li² et celle du condensateur ½Cu²."]},
-
+/* ===================== PHYSIQUE (électricité) ===================== */
+"Champ électrique":{
+ f:["Coulomb : F = k·|q·q′|/r² avec k = 9×10⁹ SI (la force varie comme 1/r²)",
+    "Force électrique : F⃗ = q·E⃗ (opposée à E⃗ si q &lt; 0, par exemple pour un électron)",
+    "Champ uniforme entre deux plaques : E = U/d, dirigé de la plaque + vers la plaque −",
+    "Travail : W<sub>AB</sub> = q·U<sub>AB</sub> ; particule accélérée depuis le repos : ½mv² = |q|U"],
+ m:"Commencer par le signe de la charge pour orienter la force, convertir toutes les longueurs en mètres et les préfixes (μ, n) en puissances de 10, puis appliquer le théorème de l'énergie cinétique quand on cherche une vitesse : il évite de passer par l'accélération et le temps.",
+ p:["Oublier que la force sur un électron est OPPOSÉE au champ.",
+    "Diviser par r au lieu de r² dans la loi de Coulomb.",
+    "Oublier la racine carrée en calculant v = √(2|q|U/m)."]
+},
+"Circuits électriques":{
+ f:["Série : R<sub>eq</sub> = R₁ + R₂ ; parallèle : 1/R<sub>eq</sub> = 1/R₁ + 1/R₂",
+    "Condensateurs : parallèle C<sub>eq</sub> = C₁ + C₂ ; série 1/C<sub>eq</sub> = 1/C₁ + 1/C₂",
+    "Résistivité : R = ρ·l/S ; puissance : P = U·I = R·I² = U²/R",
+    "Loi d'Ohm : U = R·I",
+    "Lois de Kirchhoff : Σ I entrants = Σ I sortants (nœud) ; Σ U = 0 sur une maille",
+    "Générateur : U = E − r·I ; récepteur (moteur) : U = E′ + r′·I ; Pouillet : I = E/(R + r)",
+    "Diviseur de tension : U₂ = E·R₂/(R₁ + R₂) ; énergie : W = P·t, 1 kWh = 3,6×10⁶ J"],
+ m:"Réduire le circuit par blocs successifs, en repérant ce qui est réellement en série (même courant) et en parallèle (même tension). Pour les condensateurs, les règles sont inversées par rapport aux résistances : c'est la source d'erreur la plus fréquente.",
+ p:["Appliquer aux condensateurs les règles des résistances : en parallèle les capacités s'ajoutent, en série ce sont les inverses.",
+    "Oublier de convertir la section S en m² à partir d'un diamètre en mm.",
+    "Croire que la résistance équivalente en parallèle est plus grande que chaque résistance : elle est toujours plus petite."]},
 "P9 · Dipôle RC":{
  f:["q = C·u ; τ = R·C",
     "Charge : u<sub>C</sub> = E(1 − e<sup>−t/τ</sup>) ; décharge : u<sub>C</sub> = E·e<sup>−t/τ</sup>",
@@ -238,7 +180,40 @@ window.MEMOS = {
     "Intervertir les expressions de charge et de décharge : la charge part de 0 et monte vers E.",
     "Croire que la tension d'un condensateur peut sauter brutalement : elle est toujours continue."],
  s:"rc"},
-
+"P5 · Champ magnétique":{
+ f:["Solénoïde : B = μ₀·n·I, avec n le nombre de spires par mètre (n = N/L)",
+    "Fil rectiligne infini : B = μ₀·I/(2πr)",
+    "μ₀ = 4π×10⁻⁷ SI ; B en teslas (T)"],
+ m:"Convertir N en n = N/L avant tout calcul sur un solénoïde. Pour l'orientation, régle du tire-bouchon ou du bonhomme d'Ampère. À l'intérieur d'un solénoïde long, le champ est uniforme et parallèle à l'axe.",
+ p:["Utiliser N au lieu de n = N/L dans B = μ₀nI.",
+    "Confondre le tesla (champ B) et le weber (flux Φ).",
+    "Oublier le 2π au dénominateur pour le fil rectiligne."]},
+"P6 · Particule dans un champ B":{
+ f:["Force de Lorentz : F⃗ = q·v⃗ ∧ B⃗, toujours perpendiculaire à v⃗",
+    "Travail nul ⇒ ‖v⃗‖ reste constante : le mouvement est uniforme",
+    "Rayon : R = mv/(|q|·B) ; période T = 2πm/(|q|·B), indépendante de v"],
+ m:"La force étant perpendiculaire à la vitesse, elle ne travaille pas : l'énergie cinétique se conserve. Si v⃗ ⊥ B⃗, la trajectoire est un cercle ; on obtient R en écrivant |q|vB = mv²/R. Si v⃗ est colinéaire à B⃗, la force est nulle et le mouvement rectiligne uniforme.",
+ p:["Croire que la force magnétique accélère la particule en norme : elle ne change que la direction.",
+    "Inverser R = mv/(qB) en qB/(mv) : vérifie par l'homogénéité.",
+    "Oublier que la période ne dépend pas de la vitesse — c'est le principe du cyclotron."],
+ s:"lorentz"},
+"P7 · Loi de Laplace":{
+ f:["F = B·I·L·sin α, avec α l'angle entre le conducteur et B⃗",
+    "F⃗ perpendiculaire au plan formé par le conducteur et B⃗",
+    "Force maximale quand le conducteur est perpendiculaire au champ (α = 90°)"],
+ m:"Repérer l'angle α entre le conducteur et le champ, puis appliquer F = BIL·sin α. La direction s'obtient par la règle des trois doigts de la main droite : index le champ, majeur le courant, pouce la force.",
+ p:["Écrire cos α au lieu de sin α : la force est maximale à 90°, pas à 0°.",
+    "Confondre loi de Laplace (force sur un conducteur) et force de Lorentz (force sur une charge isolée).",
+    "Placer la force dans le plan du conducteur et du champ : elle lui est perpendiculaire."]},
+"P8 · Induction & dipôle RL":{
+ f:["e = −dΦ/dt ; loi de Lenz : l'effet s'oppose à la cause qui lui donne naissance",
+    "Bobine : u = r·i + L·di/dt ; flux propre Φ = L·i",
+    "Constante de temps : τ = L/R ; énergie magnétique E = ½·L·i²",
+    "L'intensité dans une bobine ne peut pas subir de discontinuité."],
+ m:"C'est la VARIATION du flux qui crée la f.é.m. induite, pas le champ lui-même. Un champ constant à travers un circuit immobile n'induit rien. Le signe « − » de la loi de Lenz traduit la conservation de l'énergie. Le régime permanent est atteint après environ 5τ.",
+ p:["Croire qu'un champ magnétique uniforme et constant produit une induction : il faut que le flux varie.",
+    "Écrire τ = RL ou τ = R/L au lieu de τ = L/R : contrôle par l'homogénéité (des secondes).",
+    "Confondre l'énergie de la bobine ½Li² et celle du condensateur ½Cu²."]},
 "P10 · Oscillations électriques":{
  f:["LC idéal : T₀ = 2π√(LC), ω₀ = 1/√(LC)",
     "RLC série : Z = √(R² + (Lω − 1/(Cω))²)",
@@ -248,77 +223,6 @@ window.MEMOS = {
  p:["Additionner les réactances au lieu de les soustraire : c'est bien (Lω − 1/Cω).",
     "Oublier de convertir la fréquence en pulsation : ω = 2πf.",
     "Croire que l'impédance est maximale à la résonance : elle y est au contraire minimale et vaut R."]},
-
-"P11 · Oscillations mécaniques":{
- f:["Pendule élastique : T = 2π√(m/k)",
-    "Pendule simple : T = 2π√(l/g), indépendant de la masse et de l'amplitude",
-    "Équation : x″ + ω₀²x = 0 ⇒ x = A·cos(ω₀t + φ), a = −ω₀²x",
-    "Énergie mécanique d'un oscillateur élastique : E<sub>m</sub> = ½·k·A², constante sans frottement"],
- m:"Établir l'équation différentielle par la RFD projetée, la mettre sous la forme x″ + ω₀²x = 0 et lire ω₀² directement. La période s'en déduit par T = 2π/ω₀. Attention à ce qui est sous la racine : m/k pour le ressort, l/g pour le pendule simple.",
- p:["Inverser m et k : c'est √(m/k), pas √(k/m). Contrôle : une masse plus lourde oscille plus lentement.",
-    "Faire dépendre la période du pendule simple de sa masse : elle n'y figure pas.",
-    "Confondre pulsation ω₀, fréquence f = ω₀/2π et période T = 2π/ω₀."]},
-
-"P12 · Interférences & ondes":{
- f:["Interfrange : i = λD/a (a = écart entre les fentes, D = distance fentes-écran)",
-    "Différence de marche : δ = a·x/D",
-    "Frange brillante : δ = k·λ ; frange sombre : δ = (k + ½)·λ",
-    "λ = v/f = v·T"],
- m:"Convertir toutes les longueurs en mètres avant d'appliquer i = λD/a — c'est là que se perdent la plupart des points. La frange centrale correspond à δ = 0 : elle est blanche en lumière blanche, car toutes les radiations y interfèrent constructivement. Les sources doivent être cohérentes.",
- p:["Inverser a et D dans i = λD/a : l'interfrange grandit quand les fentes se rapprochent.",
-    "Oublier les conversions : λ en µm ou nm, a en mm, D en m.",
-    "Confondre frange brillante (δ = kλ) et frange sombre (δ = (k + ½)λ)."],
- s:"young"},
-
-"P13 · Effet photoélectrique":{
- f:["E = hν = hc/λ ; h = 6,63×10⁻³⁴ J·s ; hc ≈ 1240 eV·nm",
-    "Travail d'extraction : W₀ = hν₀ = hc/λ₀",
-    "Relation d'Einstein : E<sub>c,max</sub> = hν − W₀",
-    "1 eV = 1,6×10⁻¹⁹ J"],
- m:"C'est un effet de SEUIL en fréquence : rien ne se produit tant que ν &lt; ν₀, quelle que soit l'intensité lumineuse. Augmenter l'éclairement augmente le nombre d'électrons arrachés, jamais leur énergie individuelle. Pour une longueur d'onde seuil, utiliser λ₀ = 1240/W₀ avec W₀ en eV et λ₀ en nm.",
- p:["Croire qu'une lumière intense finit par arracher des électrons sous le seuil : la fréquence seule décide.",
-    "Additionner au lieu de soustraire : c'est hν − W₀.",
-    "Mélanger joules et électron-volts dans un même calcul."]},
-
-"P14 · Niveaux d'énergie":{
- f:["Hydrogène : E<sub>n</sub> = −13,6/n² (eV)",
-    "Émission (p → n avec n &lt; p) : hν = E<sub>p</sub> − E<sub>n</sub>",
-    "Énergie d'ionisation depuis le fondamental : 13,6 eV",
-    "Séries : Lyman (arrivée n = 1, UV), Balmer (n = 2, visible), Paschen (n = 3, IR)"],
- m:"Calculer les deux niveaux, faire la différence en valeur absolue, puis λ = 1240/ΔE avec ΔE en eV et λ en nm. Descendre d'un niveau signifie émettre, monter signifie absorber. La série se lit sur le niveau d'ARRIVÉE, pas sur le niveau de départ.",
- p:["Oublier le signe « − » de E<sub>n</sub> = −13,6/n² : les niveaux sont négatifs, l'énergie du photon est positive.",
-    "Identifier la série par le niveau de départ : c'est le niveau d'arrivée qui la nomme.",
-    "Diviser par n au lieu de n² dans la formule."]},
-
-"P15 · Réactions nucléaires":{
- f:["Lois de Soddy : conservation du nombre de masse A et du numéro atomique Z",
-    "α : (A, Z) → (A − 4, Z − 2) ; β⁻ : (A, Z) → (A, Z + 1) ; β⁺ : (A, Z) → (A, Z − 1)",
-    "Décroissance : N = N₀·e<sup>−λt</sup> ; demi-vie T = ln2/λ ; activité A = λN (Bq)",
-    "Énergie de liaison : E = Δm·c²"],
- m:"Équilibrer d'abord A puis Z de part et d'autre de la flèche : les lois de Soddy suffisent à identifier la particule émise. Pour la décroissance, raisonner en nombre de demi-vies : après n demi-vies il reste (1/2)<sup>n</sup> des noyaux initiaux.",
- p:["Modifier A lors d'une désintégration β : seul Z change, A reste constant.",
-    "Confondre la constante radioactive λ (s⁻¹) et la demi-vie T (s) : T = ln2/λ.",
-    "Croire que la fusion concerne les noyaux lourds : c'est l'inverse, elle assemble des noyaux légers."]},
-
-"Circuits électriques":{
- f:["Série : R<sub>eq</sub> = R₁ + R₂ ; parallèle : 1/R<sub>eq</sub> = 1/R₁ + 1/R₂",
-    "Condensateurs : parallèle C<sub>eq</sub> = C₁ + C₂ ; série 1/C<sub>eq</sub> = 1/C₁ + 1/C₂",
-    "Résistivité : R = ρ·l/S ; puissance : P = U·I = R·I² = U²/R",
-    "Loi d'Ohm : U = R·I"],
- m:"Réduire le circuit par blocs successifs, en repérant ce qui est réellement en série (même courant) et en parallèle (même tension). Pour les condensateurs, les règles sont inversées par rapport aux résistances : c'est la source d'erreur la plus fréquente.",
- p:["Appliquer aux condensateurs les règles des résistances : en parallèle les capacités s'ajoutent, en série ce sont les inverses.",
-    "Oublier de convertir la section S en m² à partir d'un diamètre en mm.",
-    "Croire que la résistance équivalente en parallèle est plus grande que chaque résistance : elle est toujours plus petite."]},
-
-"Optique géométrique":{
- f:["Relation de conjugaison : 1/OA′ − 1/OA = 1/f′ (mesures algébriques)",
-    "Grandissement : γ = OA′/OA ; γ &lt; 0 ⇒ image inversée, |γ| &lt; 1 ⇒ image réduite",
-    "Vergence : C = 1/f′ en dioptries (f′ en mètres)"],
- m:"Orienter l'axe dans le sens de la lumière et compter l'objet réel en négatif (OA &lt; 0). Appliquer la relation de conjugaison, puis interpréter : OA′ &gt; 0 donne une image réelle, γ négatif une image inversée.",
- p:["Oublier le caractère algébrique des mesures : un objet réel a une abscisse négative.",
-    "Confondre distance focale f′ (en m) et vergence C = 1/f′ (en dioptries).",
-    "Conclure sur la nature de l'image sans regarder le signe de γ."],
- s:"lentille"},
 
 /* ===================== FRANÇAIS ===================== */
 "Participe passé":{

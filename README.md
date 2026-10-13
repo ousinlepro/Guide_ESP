@@ -14,8 +14,8 @@ Version en ligne (consultable depuis le téléphone) :
 https://claude.ai/artifact/Fju4ELZe6XGChZDiywrJTp
 
 ## Contenu
-- **448 questions QCM** corrigées et expliquées (329 au niveau test d'entrée), réparties en 53 chapitres
-  (maths 144 · physique 122 · français 98 · anglais 84)
+- **402 questions QCM** corrigées et expliquées (295 au niveau test d'entrée), réparties en 44 chapitres
+  (maths 144 · physique 76, partie électricité uniquement · français 98 · anglais 84)
 - Deux niveaux : `d:1` niveau test d'entrée (Terminale S2), `d:2` renforcé
 - **Épreuves blanches** chronométrées (80 q / 3 h, 40 q / 1 h 30, 20 q / 45 min)
   avec note pondérée Maths ×3, Physique ×3, Français ×2, Anglais ×1
@@ -65,7 +65,7 @@ l'impression en noir et blanc. Planche comparative : `modeles/modeles-apercu.png
 Chaque modèle a son PDF et un aperçu PNG de ses pages 1 et 2. Pour régénérer :
 
     node outils/extrait.js > outils/contenu.json
-    python outils/modeles.py
+    python outils/modeles.py              # ajoute --ingenieur pour ne refaire que la fiche préférée
 
 ### Série corrigée (maths et physique)
 

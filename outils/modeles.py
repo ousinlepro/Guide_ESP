@@ -302,5 +302,17 @@ def planche(res):
     print("planche :", os.path.basename(out), sheet.size)
 
 
+def ingenieur():
+    """Le modèle préféré (n° 2, Ingénieur) devient la fiche à imprimer."""
+    import pypdf
+    html = genpdf.document(genpdf.CSS % GRIS + INGENIEUR + genpdf.ACCENTS)
+    out = os.path.join(genpdf.ROOT, "Cap-ESP-fiche-revision-ingenieur.pdf")
+    genpdf.vers_pdf(html, os.path.join(ICI, "fiche-ingenieur.html"), out)
+    print("fiche Ingénieur : %d pages  %s" % (len(pypdf.PdfReader(out).pages), os.path.basename(out)))
+    return out
+
+
 if __name__ == "__main__":
-    construire()
+    if "--ingenieur" not in sys.argv:
+        construire()
+    ingenieur()

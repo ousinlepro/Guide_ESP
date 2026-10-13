@@ -4,7 +4,7 @@
 const fs = require("fs"), path = require("path");
 const ROOT = path.resolve(__dirname, "..");
 
-const src = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
+const src = fs.readFileSync(path.join(ROOT, "index.html"), "utf8").replace(/\r\n/g, "\n");
 const app = src.match(/<script>([\s\S]*)<\/script>/)[1];
 const a0 = app.indexOf("var CH   =");
 const a1 = app.indexOf("/* ===================== Statistiques");
@@ -35,7 +35,7 @@ function largeur(h) {
   return texte(s).length;
 }
 
-const LIB = { maths: "Mathématiques", physique: "Physique", francais: "Français",
+const LIB = { maths: "Mathématiques", physique: "Physique · électricité", francais: "Français",
               anglais: "Anglais", strategie: "Stratégie" };
 const COEF = { maths: 3, physique: 3, francais: 2, anglais: 1 };
 

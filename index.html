@@ -607,7 +607,7 @@ sub{bottom:-.22em}
 var TEST_DATE = new Date(2026,9,17);           // 17 octobre 2026
 var MAT = {
   maths:    {nom:"Mathématiques", coef:3, court:"Maths"},
-  physique: {nom:"Physique",      coef:3, court:"Physique"},
+  physique: {nom:"Physique (électricité)", coef:3, court:"Électricité"},
   francais: {nom:"Français",      coef:2, court:"Français"},
   anglais:  {nom:"Anglais",       coef:1, court:"Anglais"}
 };
@@ -961,7 +961,7 @@ RENDER.bord=function(){
   hero.appendChild(el("div","hero-j",(j===0?"J<small>c'est aujourd'hui</small>":"J-"+j+"<small>avant le test</small>")));
   var ht=el("div","hero-txt");
   ht.innerHTML='<h2>Test d\'entrée ESP — samedi 17 octobre 2026</h2>'+
-    '<p class="sub">QCM de 3 heures · Mathématiques, Physique, Français, Anglais · niveau Terminale S2. '+
+    '<p class="sub">QCM de 3 heures · Mathématiques, Physique (électricité), Français, Anglais · niveau Terminale S2. '+
     'Une barre d\'admission à franchir, pas un classement à gagner.</p>';
   hero.appendChild(ht);
   v.appendChild(hero);
@@ -1510,7 +1510,7 @@ RENDER.fiches=function(){
   intro.appendChild(el("p","sub","Tout ce qui doit être su par cœur, réduit au strict nécessaire. Les trois derniers jours, on ne lit plus que ça."));
   v.appendChild(intro);
 
-  var groupes={maths:"Mathématiques", physique:"Physique", francais:"Français",
+  var groupes={maths:"Mathématiques", physique:"Physique — électricité", francais:"Français",
                anglais:"Anglais", strategie:"Stratégie"};
   Object.keys(groupes).forEach(function(g){
     var fs=FICHES.filter(function(f){return f.mat===g;});
@@ -1734,7 +1734,7 @@ RENDER.infos=function(){
    ["Lieu","École Supérieure Polytechnique — UCAD, Corniche Ouest, Dakar"],
    ["Nature","Test d'entrée (admission en L1), et non un concours de classement"],
    ["Format","QCM, 3 heures, quatre matières pour tous les candidats"],
-   ["Matières","Mathématiques, Physique, Français, Anglais"],
+   ["Matières","Mathématiques, Physique (partie électricité), Français, Anglais"],
    ["Coefficients","3 · 3 · 2 · 1"],
    ["Niveau","Programme de Terminale (série S2 pour toi)"],
    ["À apporter","Pièce d'identité ou carte d'étudiant, convocation, stylos, montre"]]
@@ -1769,7 +1769,7 @@ RENDER.infos=function(){
       return "<tr><td>"+MAT[m].nom+"</td><td class='n'>"+qs.length+"</td><td class='n'>"+chs.length+"</td></tr>";
     }).join("")+"<tr><td><b>Total</b></td><td class='n'><b>"+every().length+"</b></td><td class='n'></td></tr></tbody>";
   tw2.appendChild(t2); c2.appendChild(tw2);
-  c2.appendChild(el("p","sub","Les questions suivent les programmes officiels sénégalais de Terminale S2 (mathématiques, Office du Baccalauréat) et de Terminale S1/S2 (sciences physiques), complétés par les thèmes réellement rencontrés dans les épreuves QCM d'entrée aux écoles d'ingénieurs du Sénégal : circuits électriques, optique géométrique, ondes."));
+  c2.appendChild(el("p","sub","Les questions suivent les programmes officiels sénégalais de Terminale S2 (mathématiques, Office du Baccalauréat) et de Terminale S1/S2 (sciences physiques), En physique, la préparation se concentre sur l'électricité : champ électrique, circuits en courant continu, condensateur et dipôle RC, champ magnétique, loi de Laplace, induction et dipôle RL, oscillations électriques."));
   v.appendChild(c2);
 
   var c3=el("div","card");

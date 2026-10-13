@@ -86,67 +86,58 @@ window.FICHES = [
   "Régression : passe par G(x̄ ; ȳ) ; −1 ≤ r ≤ 1"]}]},
 
 /* ================================ PHYSIQUE ================================ */
-{mat:"physique",titre:"Mécanique et gravitation",bloc:[
- {t:"Cinématique, dynamique, énergie",k:"fx",l:[
-  "MRUV : v = at + v₀ ; x = ½at² + v₀t + x₀ ; v² − v₀² = 2a(x − x₀)",
-  "Circulaire uniforme : a = v²/R, vers le centre ; v = Rω ; ω = 2πN = 2π/T",
-  "RFD — théorème du centre d'inertie : ΣF⃗ = ma⃗<sub>G</sub> (référentiel galiléen)",
-  "ΔE<sub>c</sub> = ΣW(F⃗) ; W(P⃗) = mg(z<sub>A</sub> − z<sub>B</sub>) ; W = F·AB·cos α",
-  "Sans frottement : E<sub>m</sub> = E<sub>c</sub> + E<sub>p</sub> = constante"]},
- {t:"Applications",k:"fx",l:[
-  "Chute libre : t = √(2h/g) ; v = √(2gh) (masse sans effet)",
-  "Plan incliné sans frottement : a = g sin α",
-  "Projectile : portée (v₀² sin 2α)/g, maximale à 45°",
-  "Particule accélérée sous une tension U : E<sub>c</sub> = |q|U"]},
- {t:"Gravitation",k:"fx",l:[
-  "F = Gmm′/r² ; g₀ = GM/R² ; g = GM/(R + h)²",
-  "Satellite : v = √(GM/r) ; T²/r³ = 4π²/(GM) ; r = R + h",
-  "Géostationnaire : T = 24 h, plan équatorial, h ≈ 36 000 km"]}]},
+{mat:"physique",titre:"Électrostatique et courant continu",bloc:[
+ {t:"Champ et force électriques",k:"fx",l:[
+  "Coulomb : F = k|qq′|/r² ; k = 9×10⁹ SI (F varie en 1/r²)",
+  "F⃗ = qE⃗ (électron : force opposée à E⃗) ; Plaques : E = U/d, du + vers le −",
+  "W<sub>AB</sub> = qU<sub>AB</sub> ; Depuis le repos : ½mv² = |q|U ⇒ v = √(2|q|U/m)"]},
+ {t:"Lois du courant continu",k:"fx",l:[
+  "U = RI ; R = ρl/S ; P = UI = RI² = U²/R ; W = Pt ; 1 kWh = 3,6×10⁶ J",
+  "Nœud : ΣI entrants = ΣI sortants ; Maille : ΣU = 0",
+  "Générateur : U = E − rI ; Récepteur : U = E′ + r′I",
+  "Pouillet : I = (E − E′)/(R + r + r′) ; Diviseur : U₂ = E·R₂/(R₁ + R₂)"]},
+ {t:"Associations",k:"fx",l:[
+  "Résistances : série R₁ + R₂ ; parallèle 1/R = 1/R₁ + 1/R₂ (plus petite que chacune)",
+  "Condensateurs : parallèle C₁ + C₂ ; série 1/C = 1/C₁ + 1/C₂ (règles inversées)"]}]},
 
-{mat:"physique",titre:"Électromagnétisme et circuits",bloc:[
- {t:"Champ magnétique et forces",k:"fx",l:[
-  "Solénoïde : B = μ₀nI (n = N/L) ; Fil : B = μ₀I/(2πr)",
-  "Lorentz : F⃗ = qv⃗ ∧ B⃗ ne travaille pas ⇒ ‖v⃗‖ constante",
-  "R = mv/(|q|B) ; T = 2πm/(|q|B), indépendante de v",
-  "Laplace : F = BIL sin α",
-  "Induction : e = −dΦ/dt ; Φ = BS cos θ ; Lenz : l'effet s'oppose à la cause"]},
- {t:"Dipôles RC, RL, LC, RLC",k:"fx",l:[
-  "q = Cu ; E = ½Cu² ; u<sub>C</sub> continue ; τ = RC",
-  "Charge : u = E(1 − e<sup>−t/τ</sup>) ; Décharge : u = Ee<sup>−t/τ</sup> ; À t = τ : 63 % chargé, 37 % restant",
-  "Bobine : u = ri + L·di/dt ; E = ½Li² ; i continue ; τ = L/R",
-  "LC : T₀ = 2π√(LC) ; ω₀ = 1/√(LC) ; ω = 2πf",
-  "RLC : Z = √(R² + (Lω − 1/(Cω))²) ; Résonance Lω = 1/(Cω) ⇒ Z = R, I max, φ = 0",
-  "P = UI cos φ"]},
- {t:"Associations et conducteurs",k:"fx",l:[
-  "Résistances : série R₁ + R₂ ; parallèle 1/R = 1/R₁ + 1/R₂",
-  "Condensateurs : parallèle C₁ + C₂ ; série 1/C = 1/C₁ + 1/C₂",
-  "Ressorts : parallèle k₁ + k₂ ; série 1/k = 1/k₁ + 1/k₂",
-  "U = RI ; R = ρl/S ; P = RI² = U²/R"]}]},
+{mat:"physique",titre:"Magnétisme et induction",bloc:[
+ {t:"Champ magnétique",k:"fx",l:[
+  "Aimant : lignes du nord vers le sud à l'extérieur ; unité : tesla (T)",
+  "Solénoïde : B = μ₀nI (n = N/L) ; Fil : B = μ₀I/(2πr) ; μ₀ = 4π×10⁻⁷ SI"]},
+ {t:"Forces magnétiques",k:"fx",l:[
+  "Lorentz : F⃗ = qv⃗ ∧ B⃗ ; F = |q|vB sin α ; ne travaille pas ⇒ ‖v⃗‖ constante",
+  "v⃗ ⊥ B⃗ : cercle, R = mv/(|q|B) ; T = 2πm/(|q|B), indépendante de v",
+  "Laplace : F⃗ = Iℓ⃗ ∧ B⃗ ; F = IℓB sin α (trois doigts, main droite) ; principe du moteur"]},
+ {t:"Induction et auto-induction",k:"fx",l:[
+  "Φ = BS cos θ (Wb) ; e = −dΦ/dt ; Lenz : l'effet s'oppose à la cause",
+  "Rails : e = Bℓv ; i = e/R ; la force de Laplace induite freine la tige",
+  "Bobine : e = −L·di/dt ; u = ri + L·di/dt ; flux propre Φ = Li"]}]},
 
-{mat:"physique",titre:"Oscillations, ondes, optique, atome",bloc:[
- {t:"Oscillateurs",k:"fx",l:[
-  "Pendule élastique : T = 2π√(m/k) ; Pendule simple : T = 2π√(l/g), sans m",
-  "x″ + ω₀²x = 0 ⇒ x = A cos(ω₀t + φ) ; a = −ω₀²x ; E<sub>m</sub> = ½kA²"]},
- {t:"Ondes, interférences, lentille",k:"fx",l:[
-  "λ = v/f = vT ; Young : i = λD/a ; δ = ax/D",
-  "Brillante : δ = kλ ; Sombre : δ = (k + ½)λ ; Centre blanc en lumière blanche",
-  "Lentille : 1/OA′ − 1/OA = 1/f′ (objet réel : OA &lt; 0) ; γ = OA′/OA ; C = 1/f′ (f′ en m)"]},
- {t:"Quantique et nucléaire",k:"fx",l:[
-  "E = hν = hc/λ ; hc ≈ 1240 eV·nm",
-  "Photoélectrique : E<sub>c,max</sub> = hν − W₀ ; W₀ = hν₀ = hc/λ₀ (seuil en fréquence)",
-  "Hydrogène : E<sub>n</sub> = −13,6/n² eV ; Lyman → n = 1 (UV), Balmer → n = 2 (visible), Paschen → n = 3 (IR)",
-  "Soddy : A et Z conservés ; α : (A − 4, Z − 2) ; β⁻ : (A, Z + 1) ; β⁺ : (A, Z − 1)",
-  "N = N₀e<sup>−λt</sup> ; T = ln2/λ ; A = λN (Bq) ; Après n demi-vies : N₀/2<sup>n</sup> ; E<sub>liaison</sub> = Δm·c²"]}]},
+{mat:"physique",titre:"Dipôles et oscillations électriques",bloc:[
+ {t:"Condensateur et dipôle RC",k:"fx",l:[
+  "q = Cu ; i = C·du/dt ; E = ½Cu² ; u<sub>C</sub> continue ; τ = RC",
+  "Charge : u = E(1 − e<sup>−t/τ</sup>) ; Décharge : u = Ee<sup>−t/τ</sup>",
+  "À t = τ : 63 % chargé, 37 % restant ; à 5τ : régime permanent"]},
+ {t:"Bobine et dipôle RL",k:"fx",l:[
+  "τ = L/R ; i = (E/R)(1 − e<sup>−t/τ</sup>) ; E = ½Li² ; i continue"]},
+ {t:"LC et RLC",k:"fx",l:[
+  "LC : q″ + q/(LC) = 0 ; ω₀ = 1/√(LC) ; T₀ = 2π√(LC) ; ½CU₀² = ½LI<sub>m</sub>²",
+  "RLC : Z = √(R² + (Lω − 1/(Cω))²) ; tan φ = (Lω − 1/(Cω))/R",
+  "Résonance : ω = ω₀ ; Z = R ; I₀ = U/R ; φ = 0 ; Q = Lω₀/R ; Δω = R/L ; U<sub>C</sub> = QU",
+  "ω < ω₀ : capacitif (φ < 0) ; ω > ω₀ : inductif (φ > 0)"]},
+ {t:"Régime sinusoïdal",k:"fx",l:[
+  "U<sub>eff</sub> = U<sub>m</sub>/√2 ; ω = 2πf ; P = U<sub>eff</sub>I<sub>eff</sub> cos φ ; appareils AC : valeurs efficaces"]}]},
 
 {mat:"physique",titre:"Unités, préfixes et constantes",bloc:[
  {t:"Préfixes",tab:{
-  h:["G","M","k","m","µ","n","p","f"],
-  r:[["10⁹","10⁶","10³","10⁻³","10⁻⁶","10⁻⁹","10⁻¹²","10⁻¹⁵"]]}},
+  h:["G","M","k","m","µ","n","p"],
+  r:[["10⁹","10⁶","10³","10⁻³","10⁻⁶","10⁻⁹","10⁻¹²"]]}},
+ {t:"Unités électriques",tab:{
+  h:["Charge","Capacité","Inductance","Champ B","Flux","Champ E"],
+  r:[["C","F","H","T","Wb","V·m⁻¹"]]}},
  {t:"Constantes",k:"fx",l:[
-  "c = 3×10⁸ m·s⁻¹ ; e = 1,6×10⁻¹⁹ C ; h = 6,63×10⁻³⁴ J·s",
-  "G = 6,67×10⁻¹¹ SI ; μ₀ = 4π×10⁻⁷ SI ; g ≈ 9,8 m·s⁻²",
-  "1 eV = 1,6×10⁻¹⁹ J ; m<sub>e</sub> = 9,1×10⁻³¹ kg ; m<sub>p</sub> = 1,67×10⁻²⁷ kg",
-  "Coulomb : F = k|qq′|/r² ; k = 9×10⁹ SI"]}]},
+  "e = 1,6×10⁻¹⁹ C ; m<sub>e</sub> = 9,1×10⁻³¹ kg ; m<sub>p</sub> = 1,67×10⁻²⁷ kg",
+  "μ₀ = 4π×10⁻⁷ SI ; k = 9×10⁹ SI ; 1 eV = 1,6×10⁻¹⁹ J"]}]},
 
 /* ================================ FRANÇAIS ================================ */
 {mat:"francais",titre:"Accord du participe passé — les 6 règles qui tombent",bloc:[
