@@ -565,6 +565,13 @@ sub{bottom:-.22em}
 .dfig figcaption{margin-top:10px; font-size:13.5px; color:var(--ink2); line-height:1.62; text-align:center}
 /* série interrompue */
 .card.resume{border-left:3px solid var(--accent); background:var(--accent-soft)}
+/* vrais tests */
+.annote{display:block; margin-top:8px; padding-top:8px; border-top:1px dashed var(--line2); font-size:13.5px; color:var(--ink2)}
+.ann-list{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.ann-t{border:1px solid var(--line); border-radius:var(--r); padding:14px; background:var(--raise); cursor:pointer; text-align:left; width:100%}
+.ann-t[aria-pressed="true"]{border-color:var(--primary); box-shadow:0 0 0 2px var(--primary-soft)}
+.ann-t b{display:block; font-family:var(--f-disp); font-size:16px}
+.ann-t span{font-size:13px; color:var(--ink2)}
 </style>
 
 <header class="topbar">
@@ -580,6 +587,7 @@ sub{bottom:-.22em}
   <section class="view" id="v-bord"></section>
   <section class="view" id="v-train" hidden></section>
   <section class="view" id="v-blanc" hidden></section>
+  <section class="view" id="v-annales" hidden></section>
   <section class="view" id="v-fiches" hidden></section>
   <section class="view" id="v-plan" hidden></section>
   <section class="view" id="v-err" hidden></section>
@@ -598,6 +606,7 @@ sub{bottom:-.22em}
 <script src="data/pourquoi-anglais.js"></script>
 <script src="data/fiches.js"></script>
 <script src="data/plan.js"></script>
+<script src="data/annales.js"></script>
 
 <script>
 (function(){
@@ -618,6 +627,10 @@ ORDRE.forEach(function(m){ (B[m]||[]).forEach(function(q){ q.mat=m; }); });
 function all(m){ return B[m] || []; }
 function every(){ var r=[]; ORDRE.forEach(function(m){ r=r.concat(all(m)); }); return r; }
 var BYID={}; every().forEach(function(q){ BYID[q.id]=q; });
+/* vrais tests de l'ESP : section à part, hors banque (pas de mélange avec les simulations) */
+var ANN = window.ANNALES || {tests:[], questions:[]};
+ANN.questions.forEach(function(q){ BYID[q.id]=q; });
+function nomMat(q){ return q.annale && q.mat==="physique" ? "Physique" : MAT[q.mat].court; }
 
 /* ===================== État persistant ===================== */
 var KEY="capesp.v2";   /* v2 : repart d'une progression vierge */
@@ -842,7 +855,8 @@ function blocCorrection(it, repK, ouvert){
   var e1 = el("div", "expl " + (juste ? "eok" : "eko"));
   e1.innerHTML = (juste ? '<b class="v">\u2713 Correct.</b> '
                         : '<b class="x">\u2717 Faux.</b> La bonne réponse est <b>' + NOTES[it.bonne] + '</b>. ')
-                 + mathify(q.e);
+                 + mathify(q.e)
+                 + (q.note ? '<span class="annote">' + mathify(q.note) + '</span>' : '');
   w.appendChild(e1);
   var d = blocDetail(q,
     repK == null ? null : it.idx[repK],
@@ -919,6 +933,7 @@ var TABS=[
   {id:"bord",  lab:"Tableau de bord"},
   {id:"train", lab:"Entraînement"},
   {id:"blanc", lab:"Épreuve blanche"},
+  {id:"annales", lab:"Vrais tests"},
   {id:"fiches",lab:"Fiches"},
   {id:"plan",  lab:"Plan J-26"},
   {id:"err",   lab:"Mes erreurs"},
@@ -1266,7 +1281,7 @@ function dessinerQuestion(){
   pr.innerHTML='<i style="width:'+Math.round(100*done/Q.liste.length)+'%"></i>';
   c.appendChild(pr);
 
-  c.appendChild(el("div","qchap", MAT[q.mat].court+" · "+q.ch+(q.d===2?" · renforcé":"")));
+  c.appendChild(el("div","qchap", (q.annale ? "Test "+q.an+" · Q"+q.n+" · " : "")+nomMat(q)+" · "+q.ch+(q.d===2?" · renforcé":"")));
   c.appendChild(el("div","qtext", mathify(q.q)));
 
   var opts=el("div","opts");
@@ -1491,7 +1506,7 @@ function dessinerResultats(parMat, totalOk, total, note){
     Q.liste.forEach(function(it,k){
       if(Q.rep[k]===it.bonne) return;
       var d=el("div","rev-item");
-      d.appendChild(el("div","q","<span class='tag'>"+MAT[it.ref.mat].court+"</span> "+
+      d.appendChild(el("div","q","<span class='tag'>"+nomMat(it.ref)+"</span> "+
         "<span class='tag'>"+it.ref.ch+"</span> "+mathify(it.ref.q)));
       d.appendChild(blocCorrection(it, Q.rep[k], false));
       list.appendChild(d);
@@ -1500,6 +1515,74 @@ function dessinerResultats(parMat, totalOk, total, note){
     v.appendChild(cc);
   }
 }
+
+/* ===================== Vue : Vrais tests de l'ESP ===================== */
+function prepareFixe(q){            /* ordre ORIGINAL des options, comme sur la copie */
+  var idx=q.o.map(function(_,i){return i;});
+  return {ref:q, idx:idx, opts:q.o.slice(), bonne:q.r};
+}
+var annChoix={an:null, mat:"tout", mode:"reel"};
+RENDER.annales=function(){
+  var v=document.getElementById("v-annales"); v.innerHTML="";
+  banniereReprise(v);
+  if(!annChoix.an && ANN.tests.length) annChoix.an=ANN.tests[ANN.tests.length-1].id;
+  var c=el("div","card");
+  c.appendChild(el("div","eyebrow","Sujets officiels"));
+  c.appendChild(el("h2","","Les vrais tests de l'ESP"));
+  c.appendChild(el("p","sub","Les questions des tests réellement posés (2017, 2019, 2022, 2024), avec les options dans l'ordre de la copie. Pour le Génie informatique, l'épreuve spécifique est « Physique et Électricité ». Les sujets n'ont pas de corrigé officiel : les réponses ont été résolues et vérifiées ; les défauts des sujets sont signalés par ⚠."));
+  var lt=el("div","ann-list"); lt.style.marginTop="14px";
+  ANN.tests.forEach(function(t){
+    var b=el("button","ann-t","<b>"+t.titre+"</b><span>"+t.info+"</span>"); b.type="button";
+    b.setAttribute("aria-pressed", t.id===annChoix.an ? "true" : "false");
+    b.addEventListener("click",function(){ annChoix.an=t.id; RENDER.annales(); });
+    lt.appendChild(b);
+  });
+  c.appendChild(lt);
+
+  var f=el("div","grid3"); f.style.marginTop="16px";
+  var lm=el("label","fld"); lm.appendChild(el("span",null,"Épreuve"));
+  var sm=el("select");
+  [["tout","Test complet — 80 questions"],["maths","Mathématiques — 20"],["physique","Physique et Électricité — 20"],
+   ["francais","Français — 20"],["anglais","Anglais — 20"]].forEach(function(x){
+    var o=el("option",null,x[1]); o.value=x[0]; sm.appendChild(o); });
+  sm.value=annChoix.mat; sm.addEventListener("change",function(){ annChoix.mat=sm.value; });
+  lm.appendChild(selw(sm)); f.appendChild(lm);
+  var lo=el("label","fld"); lo.appendChild(el("span",null,"Mode"));
+  var so=el("select");
+  [["reel","Conditions réelles — chronométré, correction à la fin"],["corr","Correction après chaque question"]].forEach(function(x){
+    var o=el("option",null,x[1]); o.value=x[0]; so.appendChild(o); });
+  so.value=annChoix.mode; so.addEventListener("change",function(){ annChoix.mode=so.value; });
+  lo.appendChild(selw(so)); f.appendChild(lo);
+  c.appendChild(f);
+  c.appendChild(el("p","sub","Chrono : 2 h 30 pour le test complet (durée indiquée sur le sujet 2022), 37 min pour une seule épreuve."));
+
+  var b=el("button","btn","Commencer"); b.type="button"; b.style.marginTop="14px";
+  b.addEventListener("click",function(){
+    var mats = annChoix.mat==="tout" ? ["maths","francais","anglais","physique"] : [annChoix.mat];
+    var liste=[];
+    mats.forEach(function(m){
+      liste=liste.concat(ANN.questions.filter(function(q){ return q.an===annChoix.an && q.mat===m; }));
+    });
+    var t=ANN.tests.filter(function(x){ return x.id===annChoix.an; })[0];
+    var reel = annChoix.mode==="reel";
+    demarrer({mode: reel ? "blanc" : "train",
+      lib: t.titre+" — "+(annChoix.mat==="tout" ? "test complet" : (annChoix.mat==="physique" ? "Physique et Électricité" : MAT[annChoix.mat].nom)),
+      liste: liste.map(prepareFixe), duree: reel ? (mats.length>1 ? 150*60 : 37*60) : 0, malus:false, cible:"v-annales"});
+  });
+  c.appendChild(b);
+  v.appendChild(c);
+
+  var c2=el("div","card");
+  c2.appendChild(el("div","eyebrow","À savoir"));
+  c2.appendChild(el("h2","","Ce que montrent ces sujets"));
+  var ul=el("ul","dlist"); ul.style.marginTop="10px";
+  ["Des questions reviennent d'une année à l'autre (z̄ + |z| = 6 + 2i, lim (1 − 1/x)<sup>2x</sup>, ∫x³e<sup>|x|</sup>, rotation de centre i, solénoïde de 800 spires, ion dans un champ B…) : refais-les jusqu'à les connaître par cœur.",
+   "L'épreuve « Physique et Électricité » contient aussi de la mécanique, de la gravitation et du nucléaire, pas seulement de l'électricité.",
+   "Certains sujets ont des défauts (aucune option juste, deux options vraies). Le jour J, si tu en rencontres un, choisis la proposition la plus proche et passe vite."]
+  .forEach(function(x){ ul.appendChild(el("li",null,mathify(x))); });
+  c2.appendChild(ul);
+  v.appendChild(c2);
+};
 
 /* ===================== Vue : Fiches ===================== */
 RENDER.fiches=function(){
